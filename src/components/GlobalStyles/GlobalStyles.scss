@@ -1,0 +1,41 @@
+@import 'normalize.css';
+:root {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 90%
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+.board-name{
+    display: flex;
+    margin-top: 30px;
+    
+}
+.board{
+    margin-right: 20px;
+}
+
+
+.board-color{
+    color: rgb(111, 113, 116);
+}
+
+
+.icon-margin{
+    margin-right: 2px;
+}
+.left-item-nav{
+    display: flex;
+    margin-left: 20px;
+}
+.left-item{
+    margin-top: 12px;
+    margin-left:12px ;
+}
+
