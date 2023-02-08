@@ -7,10 +7,10 @@ const cx = classNames.bind(styles);
 const BoardTitleContainer = () => {
     return (
         <div className={cx('board-title-container')}>
-            <TitleBoard className={cx('back-log')} title="Backlog" />
-            <TitleBoard className="to-do" title="To Do" />
-            <TitleBoard className="in-progress" title="In Progress" />
-            <TitleBoard className="done" title="Done" />
+            <TitleBoard  title="Backlog" />
+            <TitleBoard  title="To Do" />
+            <TitleBoard  title="In Progress" />
+            <TitleBoard  title="Done" />
         </div>
     );
 };

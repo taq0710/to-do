@@ -1,46 +1,60 @@
-import { faBriefcase, faCalendar, faPlusCircle, faSearch, faTable, faTableCells } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBriefcase,
+    faEllipsisVertical,
+    faCalendar,
+    faChevronDown,
+    faPlus,
+    faSearch,
+    faTable,
+    faTableCells,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GlobalStyles from './components/GlobalStyles';
 import classNames from 'classnames/bind';
-import { MoreIcoin } from './components/CustomIcon';
 import BoardTitleContainer from './components/BoardTitleContainer';
+import Button from './components/Buttons';
 const cx = classNames.bind(GlobalStyles);
 const App = () => {
     return (
         <>
-            <h1> <FontAwesomeIcon icon={faBriefcase}/>Team Tasks</h1>
+            <h1>
+                {' '}
+                <FontAwesomeIcon icon={faBriefcase} />
+                Team Tasks
+            </h1>
             <div className={cx('nav-bar')}>
                 <div className={cx('board-name')}>
-                    <div className={cx('board ')}>
-                        <FontAwesomeIcon className={cx('icon-margin')} icon={faTable} />
+                    <Button nonBorder leftIcon={<FontAwesomeIcon icon={faTable} />}>
                         Board.By Status
-                    </div>
-                    <div className={cx('board board-color')}>
-                        <FontAwesomeIcon className={cx('icon-margin')} icon={faTable} />
+                    </Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon icon={faTable} />}>
                         Board.By Assignee
-                    </div>
-                    <div className={cx('board board-color')}>
-                        <FontAwesomeIcon className={cx('icon-margin')} icon={faTable} />
+                    </Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon icon={faTable} />}>
                         Assigned to Me
-                    </div>
-                    <div className={cx('board board-color')}>
-                        <FontAwesomeIcon className={cx('icon-margin')} icon={faTableCells} />
+                    </Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon icon={faTableCells} />}>
                         All Tasks
-                    </div>
-                    <div className={cx('board board-color')}>
-                        <FontAwesomeIcon className={cx('icon-margin')} icon={faCalendar} />
-                        Calendar
-                    </div>
-                    <FontAwesomeIcon icon={faPlusCircle} />
+                    </Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon icon={faCalendar} />}>
+                        Calender
+                    </Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon icon={faPlus} />}></Button>
                 </div>
                 <div className={cx('left-item-nav')}>
-                  <p className={cx('left-item')}>Filter</p>
-                  <p className={cx('left-item')}>Sort</p>
-                  <FontAwesomeIcon className={cx('left-item')} icon={faSearch}/>
-                  <MoreIcoin className={cx('left-item')}/>
+                    <Button addBtn>Filter</Button>
+                    <Button addBtn>Sort</Button>
+                    <Button addBtn leftIcon={<FontAwesomeIcon className={cx('left-item')} icon={faSearch} />}></Button>
+                    <Button
+                        addBtn
+                        leftIcon={<FontAwesomeIcon className={cx('left-item')} icon={faEllipsisVertical} />}
+                    ></Button>
+                    <Button moreBtn rightIcon={<FontAwesomeIcon icon={faChevronDown} />}>
+                        New
+                    </Button>
                 </div>
             </div>
-            <BoardTitleContainer/>
+            <BoardTitleContainer />
         </>
     );
 };

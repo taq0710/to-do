@@ -11,16 +11,21 @@
 .nav-bar{
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    
+    
 }
 .board-name{
     display: flex;
-    margin-top: 30px;
+    
     
 }
 .board{
     margin-right: 20px;
 }
-
+.title-board{
+    margin-right: 20%;
+}
 
 .board-color{
     color: rgb(111, 113, 116);
@@ -34,8 +39,5 @@
     display: flex;
     margin-left: 20px;
 }
-.left-item{
-    margin-top: 12px;
-    margin-left:12px ;
-}
+
 
