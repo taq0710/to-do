@@ -1,15 +1,19 @@
-import React from 'react';
-import Button from '../Buttons';
-import Input from '../Input';
-import classNames from 'classnames/bind';
-import styles from './TaskForm.module.scss'
-const cx = classNames.bind(styles)
+import React, { useState } from 'react';
+import Button from '../Button';
 
-const TaskForm = () => {
+const TaskForm = ({ onSubmit }) => {
+    const [inputValue, setInputValue] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(inputValue);
+        setInputValue('');
+    };
+
     return (
-        <form className={cx('wrapper')}>
-            <Input />
-            <Button submit>ADD</Button>
+        <form className="wrapper" onSubmit={handleSubmit}>
+            <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+            <Button type="submit">ADD</Button>
         </form>
     );
 };

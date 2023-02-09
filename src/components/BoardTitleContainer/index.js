@@ -1,20 +1,19 @@
-import classNames from 'classnames/bind';
 import React from 'react';
-import TitleBoard from '../TitleBoard';
-import styles from './containerboard.module.scss';
+import Board from '../Board';
+import'./style.scss';
 
-const cx = classNames.bind(styles);
+
 const listItem = [
-    {className: 'back-log', title:'Backlog'},
-    {className: 'to-do', title:'To Do'},
-    {className: 'in-progress', title:'In Progress'},
-    {className: 'done', title:'Done'}
+    {key: 'back-log', title:'Backlog'},
+    {key: 'to-do', title:'To Do'},
+    {key: 'in-progress', title:'In Progress'},
+    {key: 'done', title:'Done'}
 ]
 const BoardTitleContainer = () => {
     return (
-        <div className={cx('board-title-container')}>
+        <div className='board-title-container'>
             {listItem.map(item => (
-                <TitleBoard className={item.className} title={item.title} />
+                <Board key={item.key} typeBoard={item.key} title={item.title} />
             ))}
         </div>
     );
