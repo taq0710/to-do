@@ -9,7 +9,7 @@ const listItem = [
     {key: 'in-progress', title:'In Progress'},
     {key: 'done', title:'Done'}
 ]
-const BoardTitleContainer = () => {
+const BoardContainer = () => {
     return (
         <div className='board-title-container'>
             {listItem.map(item => (
@@ -19,4 +19,4 @@ const BoardTitleContainer = () => {
     );
 };
 
-export default BoardTitleContainer;
+export default BoardContainer;
