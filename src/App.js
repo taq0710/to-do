@@ -1,10 +1,10 @@
-import BoardTitleContainer from './components/BoardTitleContainer';
+import BoardContainer from './components/BoardContainer';
 import NavBar from './components/Navbar';
 const App = () => {
     return (
         <>
            <NavBar/>
-            <BoardTitleContainer />
+            <BoardContainer />
         </>
     );
 };

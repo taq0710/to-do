@@ -9,10 +9,9 @@ import {
     faTable,
     faTableCells,
 } from '@fortawesome/free-solid-svg-icons';
-import Button from '../Buttons';
-import classNames from 'classnames/bind';
-import styles from './Navbar.module.scss'
-const cx = classNames.bind(styles)
+import Button from '../Button';
+import './style.scss'
+
 function NavBar() {
     return ( 
         <>
@@ -21,7 +20,7 @@ function NavBar() {
                 <FontAwesomeIcon icon={faBriefcase} />
                 Team Tasks
             </h1>
-            <div className={cx('nav-bar')}>
+            <div className='nav-bar'>
                 <div className='left-item-nav'>
                     <Button nonBorder leftIcon={<FontAwesomeIcon icon={faTable} />}>
                         Board.By Status
@@ -40,7 +39,7 @@ function NavBar() {
                     </Button>
                     <Button addBtn leftIcon={<FontAwesomeIcon icon={faPlus} />}></Button>
                 </div>
-                <div className={cx('right-item-nav')}>
+                <div className='right-item-nav'>
                     <Button addBtn>Filter</Button>
                     <Button addBtn>Sort</Button>
                     <Button addBtn leftIcon={<FontAwesomeIcon  icon={faSearch} />}></Button>
